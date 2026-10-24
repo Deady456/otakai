@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f3">
+  <meta name="description" content="Paket pembuatan website usaha yang rapi dan mudah diakses dari ponsel. Biaya jelas, domain tetap milik Anda, dan pelanggan dapat menghubungi Anda melalui WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Otakai Studio">
+  <meta property="og:title" content="Website usaha yang rapi, jelas, dan mudah dihubungi">
+  <meta property="og:description" content="Paket website usaha mulai Rp2.000.000. Cakupan, proses, dan biaya tambahan dijelaskan sejak awal.">
+  <link rel="canonical" href="https://otakai.cloud/jasa-website/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Jasa Pembuatan Website Usaha | Otakai Studio</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18251f;
+      --muted: #64716b;
+      --paper: #f7f7f3;
+      --surface: #fff;
+      --line: #e2e7df;
+      --green: #21694d;
+      --green-dark: #174c39;
+      --green-soft: #eaf2ec;
+      --gold: #c39453;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --wrap: 1120px;
+    }
+
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #a76316;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    .wrap { width: min(var(--wrap), calc(100% - 48px)); margin-inline: auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(226, 231, 223, .85);
+      background: rgba(247, 247, 243, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: -.035em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid #cdd8ce;
+      border-radius: 12px;
+      color: var(--green);
+      background: var(--surface);
+    }
+
+    .brand-mark svg { width: 22px; height: 22px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 0 19px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      background: var(--green);
+      color: #fff;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .button:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .button svg { width: 17px; height: 17px; flex: 0 0 auto; }
+    .button-small { min-height: 42px; padding-inline: 15px; font-size: 13px; }
+    .button-light { border-color: var(--line); background: transparent; color: var(--ink); }
+    .button-light:hover { border-color: #bccbbe; background: var(--surface); color: var(--green-dark); }
+
+    .hero { padding: 85px 0 78px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .72fr);
+      align-items: center;
+      gap: clamp(42px, 8vw, 100px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before { width: 24px; height: 1px; background: var(--gold); content: ""; }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 680px;
+      margin: 23px 0 19px;
+      font-family: var(--serif);
+      font-size: clamp(44px, 6.5vw, 75px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: 1.02;
+    }
+
+    h1 em { color: var(--green); font-weight: 400; }
+
+    .hero-copy {
+      max-width: 575px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .micro-note {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 19px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .micro-note svg { width: 16px; height: 16px; color: var(--green); flex: 0 0 auto; }
+
+    .offer-card {
+      position: relative;
+      padding: 32px;
+      border: 1px solid #dfe5dc;
+      border-radius: 10px;
+      background: var(--surface);
+      box-shadow: 0 24px 65px rgba(29, 49, 38, .07);
+    }
+
+    .offer-card::before {
+      position: absolute;
+      top: -1px;
+      left: 32px;
+      width: 58px;
+      height: 3px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .card-kicker { margin-bottom: 12px; color: var(--muted); font-size: 12px; font-weight: 650; }
+
+    .price {
+      margin-bottom: 4px;
+      font-family: var(--serif);
+      font-size: 43px;
+      letter-spacing: -.05em;
+      line-height: 1.15;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .card-caption { margin-bottom: 22px; color: var(--muted); font-size: 13px; }
+    .rule { height: 1px; margin: 20px 0; border: 0; background: var(--line); }
+
+    .check-list, .plain-list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px;
+      color: #36453d;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .check-list svg { width: 17px; height: 17px; margin-top: 1px; color: var(--green); }
+
+    .card-footnote { margin: 19px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .45);
+    }
+
+    .trust-item { padding: 22px 20px; text-align: center; }
+    .trust-item + .trust-item { border-left: 1px solid var(--line); }
+    .trust-item strong { display: block; font-size: 14px; }
+    .trust-item span { color: var(--muted); font-size: 12px; }
+
+    .section { padding: 88px 0; }
+    .section-white { background: var(--surface); }
+    .section-heading { max-width: 650px; margin-bottom: 38px; }
+
+    .section-heading h2 {
+      margin: 15px 0 12px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4.6vw, 48px);
+      font-weight: 400;
+      letter-spacing: -.045em;
+      line-height: 1.12;
+    }
+
+    .section-heading p { margin-bottom: 0; color: var(--muted); }
+
+    .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+
+    .benefit {
+      min-height: 205px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+    }
+
+    .benefit-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 20px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .benefit-icon svg { width: 21px; height: 21px; }
+    .benefit h3 { margin-bottom: 8px; font-size: 15px; letter-spacing: -.015em; }
+    .benefit p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+
+    .process-step { padding-top: 17px; border-top: 1px solid #cad7cb; }
+    .step-number { display: block; margin-bottom: 20px; color: var(--green); font-family: var(--serif); font-size: 24px; }
+    .process-step h3 { margin-bottom: 7px; font-size: 14px; }
+    .process-step p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+
+    .scope-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .scope-card { padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+    .scope-card h3 { margin-bottom: 18px; font-family: var(--serif); font-size: 24px; font-weight: 400; }
+    .plain-list li { position: relative; padding-left: 19px; color: #45534b; font-size: 13px; }
+    .plain-list li::before { position: absolute; top: 10px; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--green); content: ""; }
+    .scope-card-excluded .plain-list li::before { background: #a7afa8; }
+
+    .addons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .addon { padding: 24px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .addon-label { display: block; margin-bottom: 17px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .addon h3 { margin-bottom: 7px; font-size: 15px; }
+    .addon p { min-height: 62px; margin-bottom: 16px; color: var(--muted); font-size: 12px; }
+    .addon-price { color: var(--green-dark); font-size: 14px; font-weight: 750; }
+    .addons-note { margin: 17px 0 0; color: var(--muted); font-size: 12px; }
+
+    .terms {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 60px;
+      align-items: start;
+    }
+
+    .terms-intro h2 { margin: 15px 0 12px; font-family: var(--serif); font-size: 42px; font-weight: 400; letter-spacing: -.04em; line-height: 1.1; }
+    .terms-intro p { color: var(--muted); font-size: 14px; }
+    .terms-list { display: grid; gap: 0; }
+    .term { padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .term:first-child { padding-top: 0; }
+    .term h3 { margin-bottom: 5px; font-size: 13px; }
+    .term p { margin-bottom: 0; color: var(--muted); font-size: 12px; }
+
+    .faq-list { max-width: 790px; border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary { position: relative; padding: 18px 35px 18px 0; cursor: pointer; font-size: 14px; font-weight: 650; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { position: absolute; top: 16px; right: 5px; color: var(--green); font-size: 20px; font-weight: 400; content: "+"; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { max-width: 690px; padding: 0 25px 17px 0; margin: 0; color: var(--muted); font-size: 13px; }
+
+    .contact { padding: 70px 0; background: #173d30; color: #fff; }
+    .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
+    .contact .eyebrow { color: #a8c5ae; }
+    .contact h2 { max-width: 620px; margin: 13px 0 9px; font-family: var(--serif); font-size: clamp(34px, 4vw, 48px); font-weight: 400; letter-spacing: -.04em; line-height: 1.1; }
+    .contact p { max-width: 610px; margin: 0; color: #d0ddd4; font-size: 14px; }
+    .contact .button { flex: 0 0 auto; background: #f7f7f3; color: var(--green-dark); }
+    .contact .button:hover { background: #e7eee6; }
+
+    .footer { padding: 24px 0; color: var(--muted); font-size: 11px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; }
+    .footer p { margin: 0; }
+    .footer a { text-decoration: none; }
+
+    @media (max-width: 850px) {
+      .hero { padding-top: 62px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      .offer-card { max-width: 540px; }
+      .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
+      .terms { grid-template-columns: 1fr; gap: 28px; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(var(--wrap), calc(100% - 36px)); }
+      .nav { min-height: 66px; }
+      .nav-links { display: none; }
+      .nav .button-small { min-height: 40px; padding-inline: 12px; }
+      .hero { padding: 56px 0 48px; }
+      h1 { font-size: clamp(44px, 13vw, 60px); }
+      .hero-copy { font-size: 15px; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .hero-actions .button { width: 100%; }
+      .offer-card { padding: 26px 22px; }
+      .price { font-size: 39px; }
+      .trust-row { grid-template-columns: 1fr; }
+      .trust-item { padding: 14px 10px; }
+      .trust-item + .trust-item { border-top: 1px solid var(--line); border-left: 0; }
+      .section { padding: 65px 0; }
+      .section-heading { margin-bottom: 28px; }
+      .benefit-grid, .scope-layout, .addons { grid-template-columns: 1fr; }
+      .benefit { min-height: 0; }
+      .benefit-icon { margin-bottom: 15px; }
+      .process-grid { gap: 25px 18px; }
+      .process-step { padding-top: 12px; }
+      .step-number { margin-bottom: 12px; }
+      .scope-card { padding: 23px; }
+      .addon p { min-height: 0; }
+      .terms-intro h2 { font-size: 36px; }
+      .contact { padding: 55px 0; }
+      .contact-inner { align-items: flex-start; flex-direction: column; }
+      .contact .button { width: 100%; }
+      .footer-inner { flex-direction: column; gap: 6px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="Otakai Studio, kembali ke awal">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M12 3.5 20.5 8v8L12 20.5 3.5 16V8L12 3.5Z"/>
+            <path d="M8.4 12h7.2M12 8.4v7.2"/>
+          </svg>
+        </span>
+        <span>Otakai <span style="color:var(--muted);font-weight:550">Studio</span></span>
+      </a>
+      <div class="nav-links" aria-label="Tautan halaman">
+        <a href="#paket">Paket</a>
+        <a href="#proses">Proses</a>
+        <a href="#ketentuan">Ketentuan</a>
+      </div>
+      <a class="button button-small" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20ingin%20bertanya%20tentang%20paket%20website." target="_blank" rel="noopener noreferrer">
+        Konsultasi
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="beranda">
+    <section class="hero">
+      <div class="hero-grid wrap">
+        <div>
+          <span class="eyebrow">Website untuk usaha lokal</span>
+          <h1>Usaha Anda pantas punya <em>rumah online</em> yang rapi.</h1>
+          <p class="hero-copy">Website yang membantu calon pelanggan memahami layanan Anda, melihat informasi penting, lalu menghubungi bisnis Anda lewat WhatsApp. Dirancang nyaman dibuka dari ponsel.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20ingin%20konsultasi%20website%20untuk%20usaha%20saya." target="_blank" rel="noopener noreferrer">
+              Bicarakan kebutuhan usaha
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button button-light" href="#paket">Lihat paket dan biaya</a>
+          </div>
+          <div class="micro-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3 19 6v5c0 4.6-2.9 8-7 10-4.1-2-7-5.4-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Domain dan akun digital tetap atas nama Anda. Harga dan cakupan disepakati di awal.
+          </div>
+        </div>
+
+        <aside class="offer-card" id="paket" aria-labelledby="package-title">
+          <p class="card-kicker">PAKET WEBSITE USAHA</p>
+          <h2 class="price" id="package-title">Rp2.000.000 <small>/ sekali bayar</small></h2>
+          <p class="card-caption">Untuk satu website profil / landing page statis dengan kebutuhan yang jelas.</p>
+          <hr class="rule">
+          <ul class="check-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Halaman yang disesuaikan dengan identitas dan materi usaha Anda.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Tampilan responsif untuk ponsel, tablet, dan komputer.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Tombol WhatsApp, favicon, judul halaman, dan metadata dasar.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Bantuan deploy, pengaturan DNS dan HTTPS untuk satu domain.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Dua putaran revisi serta perbaikan bug selama 7 hari setelah serah terima.</span></li>
+          </ul>
+          <hr class="rule">
+          <a class="button" style="width:100%" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20ingin%20menanyakan%20paket%20website%20Rp2.000.000." target="_blank" rel="noopener noreferrer">
+            Tanyakan paket ini
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="card-footnote">Biaya domain atau hosting berbayar, jika diperlukan, tidak termasuk dan dibayar langsung oleh Anda ke penyedia.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-row wrap" aria-label="Ringkasan layanan">
+      <div class="trust-item"><strong>Biaya terbuka</strong><span>Ruang lingkup dan biaya tambahan dijelaskan</span></div>
+      <div class="trust-item"><strong>Akun tetap milik Anda</strong><span>Domain dan layanan didaftarkan atas nama klien</span></div>
+      <div class="trust-item"><strong>Tanpa janji berlebihan</strong><span>Tidak menjanjikan posisi Google atau jumlah pelanggan</span></div>
+    </section>
+
+    <section class="section section-white" id="manfaat">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Yang disiapkan</span>
+          <h2>Informasi usaha tersusun. Calon pelanggan tahu harus ke mana.</h2>
+          <p>Satu halaman yang memudahkan orang menemukan gambaran layanan dan kontak Anda—tanpa sistem rumit yang belum tentu dibutuhkan.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="5" y="2.8" width="14" height="18.4" rx="2.5"/><path d="M9 6h6M9 18h6"/></svg></span>
+            <h3>Nyaman di ponsel</h3>
+            <p>Susunan konten dan tombol dibuat agar mudah dibaca serta digunakan pada layar kecil.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.5 11.5a8.4 8.4 0 0 1-12.2 7.4L3.5 20l1.2-4.4a8.5 8.5 0 1 1 15.8-4.1Z"/><path d="M8.5 9.2c.6 2.2 2.1 3.7 4.3 4.4"/></svg></span>
+            <h3>Kontak langsung</h3>
+            <p>Tombol WhatsApp membantu pengunjung memulai percakapan dengan pesan pembuka yang jelas.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19.5V5.8A2.8 2.8 0 0 1 6.8 3H20v16.5H6.8A2.8 2.8 0 0 0 4 22"/><path d="M4 19.5a2.5 2.5 0 0 1 2.5-2.5H20M8 7h8M8 11h8"/></svg></span>
+            <h3>Informasi lebih tertata</h3>
+            <p>Layanan, jam operasional, area layanan, foto, dan kontak disusun sesuai prioritas bisnis.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
+            <h3>Domain milik bisnis</h3>
+            <p>Domain didaftarkan atas nama Anda. Saya membantu menyambungkan DNS tanpa mengambil alih kepemilikan.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7"/></svg></span>
+            <h3>Dasar yang siap ditemukan</h3>
+            <p>Judul halaman, deskripsi, struktur konten, dan tautan dasar disiapkan. Hasil pencarian tidak dijamin.</p>
+          </article>
+          <article class="benefit">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></span>
+            <h3>Bisa dikembangkan</h3>
+            <p>Mulai dari halaman sederhana. Fitur seperti katalog, pemesanan lanjutan, atau PWA dapat dibahas terpisah.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proses">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Proses kerja</span>
+          <h2>Jelas dari percakapan pertama sampai serah terima.</h2>
+          <p>Target pengerjaan sekitar 5–7 hari kerja setelah materi lengkap dan DP diterima. Persetujuan konten atau revisi yang terlambat dapat mengubah jadwal.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step"><span class="step-number">01</span><h3>Kenali kebutuhan</h3><p>Kita sepakati tujuan, isi halaman, domain, biaya, dan batas pekerjaan secara tertulis.</p></article>
+          <article class="process-step"><span class="step-number">02</span><h3>Siapkan materi</h3><p>Anda mengirim logo, foto yang boleh dipakai, kontak, layanan, dan informasi usaha yang benar.</p></article>
+          <article class="process-step"><span class="step-number">03</span><h3>Bangun dan tinjau</h3><p>Website dibuat pada tautan pratinjau. Dua putaran revisi sesuai paket dapat digunakan di tahap ini.</p></article>
+          <article class="process-step"><span class="step-number">04</span><h3>Terbit dan serahkan</h3><p>Setelah disetujui dan pelunasan, bantu hubungkan domain, uji situs, lalu serahkan panduan akses.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Cakupan yang terang</span>
+          <h2>Apa yang masuk paket—dan apa yang dihitung terpisah.</h2>
+        </div>
+        <div class="scope-layout">
+          <article class="scope-card">
+            <h3>Termasuk Rp2.000.000</h3>
+            <ul class="plain-list">
+              <li>Satu website profil / landing page statis, satu bahasa, dengan isi yang disepakati.</li>
+              <li>Penyesuaian warna dan identitas visual menggunakan materi yang Anda sediakan.</li>
+              <li>Tombol WhatsApp, favicon, judul, deskripsi, serta pengecekan tautan dan tampilan.</li>
+              <li>Bantuan publikasi ke hosting statis dan penyambungan DNS/HTTPS satu domain.</li>
+              <li>Dua putaran revisi sebelum terbit dan perbaikan bug selama 7 hari setelah serah terima.</li>
+            </ul>
+          </article>
+          <article class="scope-card scope-card-excluded">
+            <h3>Tidak termasuk</h3>
+            <ul class="plain-list">
+              <li>Biaya beli/perpanjangan domain, paket hosting berbayar, email bisnis, atau layanan pihak ketiga.</li>
+              <li>Foto profesional, penulisan konten dari nol, logo baru, dan biaya cetak materi.</li>
+              <li>Sistem akun, database, dashboard, pembayaran, aplikasi native, dan fitur booking backend.</li>
+              <li>Biaya iklan, jaminan muncul di halaman pertama Google, peringkat Maps, atau jumlah prospek.</li>
+              <li>Perubahan besar, halaman tambahan, atau fitur di luar kesepakatan awal.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="addons-note">Hosting statis dapat memakai paket gratis bila sesuai kebutuhan dan ketentuan penyedia; ketersediaan maupun kebijakan penyedia dapat berubah. Jika paket gratis tidak cukup, opsi dan biayanya disetujui dahulu.</p>
+      </div>
+    </section>
+
+    <section class="section" id="tambahan">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Jika diperlukan</span>
+          <h2>Layanan tambahan yang bisa dipilih.</h2>
+          <p>Tidak wajib. Kita pilih hanya jika memang membantu kebutuhan usaha Anda.</p>
+        </div>
+        <div class="addons">
+          <article class="addon">
+            <span class="addon-label">Visibilitas lokal</span>
+            <h3>Bantuan Google Business Profile</h3>
+            <p>Bantuan pengaturan profil atau klaim akses, kelengkapan data, dan tautan ke website. Akun tetap milik Anda.</p>
+            <span class="addon-price">Rp500.000 / sekali setup</span>
+          </article>
+          <article class="addon">
+            <span class="addon-label">Perawatan terjadwal</span>
+            <h3>Pemeliharaan ringan</h3>
+            <p>Perubahan konten kecil dan pengecekan dasar, dengan batas sampai 30 menit pekerjaan per bulan.</p>
+            <span class="addon-price">Rp200.000 / bulan</span>
+          </article>
+          <article class="addon">
+            <span class="addon-label">Tahap berikutnya</span>
+            <h3>PWA yang dapat dipasang</h3>
+            <p>Tambahan pengalaman instalasi dari browser. Bukan aplikasi Play Store/App Store; perlu pengecekan kebutuhan dahulu.</p>
+            <span class="addon-price">Mulai Rp1.000.000</span>
+          </article>
+        </div>
+        <p class="addons-note">Profil Google tidak dikenai biaya oleh Google. Jasa di atas adalah bantuan pengerjaan; verifikasi dan keputusan kelayakan mengikuti kebijakan Google, tanpa jaminan peringkat atau ulasan. Aplikasi Android/iOS native memerlukan pembahasan dan penawaran proyek terpisah.</p>
+      </div>
+    </section>
+
+    <section class="section section-white" id="ketentuan">
+      <div class="terms wrap">
+        <div class="terms-intro">
+          <span class="eyebrow">Ketentuan kerja sama</span>
+          <h2>Kerja yang baik dimulai dari harapan yang sama.</h2>
+          <p>Kesepakatan akhir akan dicatat tertulis sebelum pengerjaan dimulai. Berikut aturan dasar paket ini.</p>
+        </div>
+        <div class="terms-list">
+          <article class="term"><h3>Pembayaran bertahap</h3><p>DP 50% untuk memulai dan mengamankan jadwal. Pelunasan 50% setelah pratinjau disetujui, sebelum domain diarahkan ke website produksi.</p></article>
+          <article class="term"><h3>Akun dan materi tetap milik Anda</h3><p>Domain dan akun hosting sebaiknya didaftarkan dengan email Anda. Jangan kirim kata sandi melalui chat; gunakan akses kolaborator atau berbagi akses yang aman.</p></article>
+          <article class="term"><h3>DNS dan email bisnis</h3><p>Sebelum mengubah DNS, catatan yang sudah ada diperiksa. Record email seperti MX tidak diubah tanpa persetujuan, agar layanan email tidak terganggu.</p></article>
+          <article class="term"><h3>Materi dan izin penggunaan</h3><p>Anda bertanggung jawab atas ketepatan informasi bisnis dan memastikan foto, logo, serta materi yang diberikan boleh digunakan.</p></article>
+          <article class="term"><h3>Revisi dan perubahan tambahan</h3><p>Dua putaran revisi mencakup penyesuaian dalam cakupan yang disepakati. Fitur, halaman, atau perubahan besar berikutnya dihitung dengan persetujuan biaya terlebih dahulu.</p></article>
+          <article class="term"><h3>Hosting, domain, dan hasil pemasaran</h3><p>Biaya pihak ketiga diinformasikan terpisah. Ketersediaan hosting, verifikasi Google, ranking pencarian, dan jumlah pelanggan tidak dapat dijamin.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Pertanyaan umum</span>
+          <h2>Yang sering ditanyakan sebelum mulai.</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Apakah domain dan hosting sudah termasuk harga?</summary><p>Jasa menyiapkan website, membantu publikasi pada hosting statis yang sesuai, serta konfigurasi domain dan HTTPS untuk satu domain termasuk. Pembelian/perpanjangan domain dan paket hosting berbayar merupakan biaya pihak ketiga, dibayar langsung oleh Anda setelah menyetujui pilihannya.</p></details>
+          <details><summary>Apakah saya perlu menyerahkan password domain?</summary><p>Tidak. Akun sebaiknya tetap menggunakan email Anda. Kita dapat menggunakan akses kolaborator atau mengikuti langkah konfigurasi bersama; perubahan DNS diperiksa sebelum diterapkan.</p></details>
+          <details><summary>Apakah website langsung muncul di Google?</summary><p>Website dapat diberi struktur dan metadata dasar yang baik, tetapi pengindeksan, urutan hasil, Google Maps, dan hasil bisnis diputuskan oleh Google. Tidak ada jaminan masuk halaman pertama.</p></details>
+          <details><summary>Bagaimana jika saya ingin tambah katalog, booking otomatis, atau aplikasi?</summary><p>Kebutuhan seperti database, dashboard, pembayaran, booking backend, atau aplikasi Android/iOS tidak termasuk paket dasar. Kita bahas kebutuhannya, kemudian buat estimasi dan persetujuan terpisah.</p></details>
+          <details><summary>Bagaimana cara memulai?</summary><p>Kirim nama usaha, jenis layanan, dan apa yang ingin diperbaiki. Konsultasi awal melalui WhatsApp tidak mengikat; pekerjaan dimulai setelah cakupan, jadwal, dan pembayaran DP disetujui.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="kontak">
+      <div class="contact-inner wrap">
+        <div>
+          <span class="eyebrow">Langkah pertama</span>
+          <h2>Ceritakan kebutuhan usaha Anda.</h2>
+          <p>Tidak perlu langsung memutuskan. Kita cek dulu kebutuhan, materi yang tersedia, dan apakah paket ini memang sesuai.</p>
+        </div>
+        <a class="button" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20ingin%20konsultasi%20website.%0ANama%20usaha%3A%0AKebutuhan%3A" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 11.5a8.4 8.4 0 0 1-12.2 7.4L3.5 20l1.2-4.4a8.5 8.5 0 1 1 15.8-4.1Z"/><path d="M8.5 9.2c.6 2.2 2.1 3.7 4.3 4.4"/></svg>
+          WhatsApp 0821-4244-8254
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner wrap">
+      <p>© 2026 Otakai Studio. Informasi paket dapat berubah setelah disepakati dalam penawaran.</p>
+      <p><a href="#beranda">Kembali ke atas</a></p>
+    </div>
+  </footer>
+</body>
+</html>
