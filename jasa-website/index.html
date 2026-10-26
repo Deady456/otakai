@@ -387,6 +387,84 @@
     }
     .demo-footer a.preview-link:hover { text-decoration: underline; }
 
+    /* PRICING GRID & MANAGED SERVICE */
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 980px; margin-inline: auto; }
+    .pricing-card {
+      position: relative;
+      padding: 34px 30px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .pricing-card-featured {
+      border: 2px solid var(--green);
+      box-shadow: 0 20px 50px rgba(33, 105, 77, .1);
+      background: #fff;
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -13px;
+      right: 28px;
+      background: var(--green);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 750;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .annual-fee-box {
+      margin-top: 36px;
+      max-width: 980px;
+      margin-inline: auto;
+      padding: 24px 28px;
+      border-radius: 12px;
+      background: #eef4f0;
+      border: 1px solid #c9decb;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .managed-benefit-box {
+      margin-top: 48px;
+      padding: 36px;
+      border-radius: 14px;
+      background: #173d30;
+      color: #fff;
+    }
+    .managed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .managed-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 22px;
+    }
+    .managed-card h4 {
+      color: #fff;
+      font-size: 15px;
+      margin-top: 0;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .managed-card p {
+      color: #d0ded4;
+      font-size: 13px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
     /* TEKNIS - SECTION BAWAH */
     .tech-divider {
       text-align: center;
@@ -471,6 +549,9 @@
       .offer-card { max-width: 540px; }
       .benefit-grid { grid-template-columns: repeat(2, 1fr); }
       .demo-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .managed-grid { grid-template-columns: 1fr; }
+      .annual-fee-box { flex-direction: column; gap: 12px; }
       .process-grid { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
       .terms { grid-template-columns: 1fr; gap: 28px; }
     }
@@ -574,10 +655,10 @@
           <hr class="rule">
           <ul class="check-list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Domain resmi (.com)</strong> didaftarkan atas nama bisnis Anda sendiri.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Buka secepat kilat di HP</strong> — ringan dibuka pelanggan tanpa lemot.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Katalog & Kalkulator Otomatis</strong> terhubung langsung ke WhatsApp.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Keamanan HTTPS/SSL</strong> & hosting cepat siap terima traffic pelanggan.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Garansi perbaikan 7 hari</strong> serta panduan kelola website dari HP.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Buka secepat kilat di HP (&lt;1 detik)</strong> — ringan dibuka pelanggan tanpa lemot.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Katalog & Kalkulator Otomatis</strong> terhubung langsung ke WhatsApp Anda.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Layanan Terima Beres via WhatsApp:</strong> Bebas repot koding atau login dashboard yang rumit.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Tahun ke-1 GRATIS</strong> biaya cloud hosting & domain resmi .com.</span></li>
           </ul>
           <hr class="rule">
           <a class="button" style="width:100%" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20mau%20ambil%20Paket%20Website%20Rp1.500.000." target="_blank" rel="noopener noreferrer">
@@ -735,6 +816,110 @@
     </section>
 
     <!-- ============================================================== -->
+    <!-- PILIHAN PAKET & BIAYA TRANSPARAN                               -->
+    <!-- ============================================================== -->
+    <section class="section section-white" id="paket">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">Investasi Jelas & Transparan</span>
+          <h2>Pilihan Paket Pembuatan Website Usaha</h2>
+          <p>Investasi terjangkau di awal tanpa biaya tersembunyi. Dikelola dengan sistem <strong>Layanan Terima Beres (Managed Service)</strong> sehingga Anda tidak perlu pusing belajar koding, login dashboard yang rumit, atau mengurus server.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- CARD 1: PAKET STANDAR -->
+          <article class="pricing-card">
+            <div>
+              <p class="card-kicker">PAKET STANDAR</p>
+              <h3 class="price">Rp1.500.000 <small>/ sekali bayar</small></h3>
+              <p class="card-caption">Solusi ideal untuk usaha rental mobil, toko, kontraktor, jasa, atau kafe yang ingin tampil resmi di internet dan menerima pesanan rapi langsung ke WhatsApp.</p>
+              <hr class="rule">
+              <ul class="check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Domain Resmi .com</strong> (contoh: <em>namausaha.com</em>) gratis tahun pertama.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Website Statis Ultra Cepat (&lt;1 detik)</strong> — ringan dibuka di HP pelanggan meski sinyal seluler sedang lambat.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Katalog & Formulir Pemesanan Interaktif:</strong> Kalkulator durasi sewa yang otomatis terhubung ke WhatsApp admin.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Keamanan HTTPS/SSL (Gembok Hijau):</strong> Kebal serangan malware & hacker judi online.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Sistem Terima Beres via WhatsApp:</strong> Ganti foto/harga cukup kirim chat ke tim kami tanpa repot buka dashboard rumit.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Garansi perbaikan 7 hari</strong> penuh setelah website online.</span></li>
+              </ul>
+            </div>
+            <div>
+              <a class="button button-light" style="width:100%" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20tertarik%20mengambil%20Paket%20Standar%20Rp1.500.000." target="_blank" rel="noopener noreferrer">
+                Pilih Paket Standar (Rp1,5 Jt)
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 2: PAKET BISNIS PRO + GOOGLE MAPS -->
+          <article class="pricing-card pricing-card-featured">
+            <span class="pricing-badge">⭐ Paling Diminati</span>
+            <div>
+              <p class="card-kicker">PAKET BISNIS PRO + GOOGLE MAPS</p>
+              <h3 class="price">Rp2.500.000 <small>/ sekali bayar</small></h3>
+              <p class="card-caption">Paket komplit untuk bisnis yang ingin mendominasi pencarian Google di Timika saat tamu dari luar kota mencari jasa sewa atau tempat makan.</p>
+              <hr class="rule">
+              <ul class="check-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Semua fitur Paket Standar</strong> (Domain .com, Cloud Kilat, WhatsApp Booking).</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Setup & Optimasi Google Maps (Profil Bisnis):</strong> Titik lokasi resmi, jam operasional, foto unit, terhubung langsung ke website.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Integrasi Rute Petunjuk Arah</strong> langsung dari Bandara Mozes Kilangin ke lokasi Anda.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Penulisan Teks Promosi (SEO Timika):</strong> Ditargetkan untuk pencarian kontraktor tambang, tamu dinas, dan korporat.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>QR Code Khusus Usaha Siap Cetak</strong> untuk ditempel di meja kasir, kaca mobil, atau kartu nama.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Pengerjaan Prioritas Ekspres (3 Hari Kerja)</strong> & antrean update kilat via WhatsApp.</span></li>
+              </ul>
+            </div>
+            <div>
+              <a class="button" style="width:100%" href="https://wa.me/6282142448254?text=Halo%20Otakai%20Studio%2C%20saya%20tertarik%20mengambil%20Paket%20Bisnis%20Pro%20Rp2.500.000." target="_blank" rel="noopener noreferrer">
+                Pilih Paket Bisnis Pro (Rp2,5 Jt)
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- BIAYA TAHUNAN TRANSPARAN -->
+        <div class="annual-fee-box">
+          <div style="font-size: 28px; line-height: 1;">💡</div>
+          <div>
+            <h4 style="margin: 0 0 6px; font-size: 16px; color: var(--green-dark);">Berapa Biaya Perpanjangan di Tahun ke-2 dan Seterusnya?</h4>
+            <p style="margin: 0 0 10px; font-size: 13.5px; color: #2e4438; line-height: 1.5;">
+              <strong>1️⃣ Tahun Pertama: Sudah GRATIS (Rp 0)</strong> — Sudah termasuk lengkap dalam biaya awal pembuatan website.<br>
+              <strong>2️⃣ Tahun Kedua dan Seterusnya: Hanya Rp500.000 / tahun</strong> (artinya tidak sampai Rp42.000 per bulan).
+            </p>
+            <p style="margin: 0; font-size: 12.5px; color: #536b5e; line-height: 1.5;">
+              Biaya tahunan tersebut sudah mencakup: <strong>Perpanjangan resmi domain .com</strong> atas nama usaha Anda, cloud hosting super cepat & aman, sertifikat SSL HTTPS, serta <strong>bantuan pemeliharaan & update ringan via WhatsApp</strong> (ganti tarif sewa, tukar foto unit baru, ganti nomor kontak) kapan pun Anda butuhkan. Akun domain tetap 100% milik Anda seutuhnya.
+            </p>
+          </div>
+        </div>
+
+        <!-- EDUKASI: MENGAPA SISTEM TERIMA BERES & WEBSITE STATIS? -->
+        <div class="managed-benefit-box">
+          <div style="max-width: 680px;">
+            <span style="font-size: 11px; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; color: #9ed4b7;">Konsep Layanan Modern</span>
+            <h3 style="font-family: var(--serif); font-size: 28px; margin: 8px 0 12px; font-weight: 400; color: #fff;">Mengapa Kami Menggunakan Website Statis Tanpa Dashboard Koding yang Rumit?</h3>
+            <p style="margin: 0; font-size: 14px; color: #d0ded4; line-height: 1.6;">
+              Kami sadar pemilik usaha di Timika sangat sibuk melayani konsumen dan mengelola operasional harian. Oleh karena itu, kami memberikan solusi <strong>Managed Service (Terima Beres)</strong> — Anda tidak dibebani kewajiban belajar sistem teknis yang bikin pusing.
+            </p>
+          </div>
+
+          <div class="managed-grid">
+            <div class="managed-card">
+              <h4><span>🟢</span> 100% Bebas Ribet (Cukup WA)</h4>
+              <p>Anda tidak perlu menghafal username/password login dashboard WordPress yang membingungkan atau takut website rusak karena salah pencet tombol. Mau ganti harga atau foto unit? Cukup kirim chat WhatsApp ke tim kami, kami kerjakan langsung.</p>
+            </div>
+            <div class="managed-card">
+              <h4><span>⚡</span> Buka Cepat Kilat (&lt;1 Detik di HP)</h4>
+              <p>Website statis dibangun murni menggunakan kode bersih tanpa database berat. Saat calon pelanggan membuka dari HP dengan sinyal seluler Timika yang pas-pasan, halaman langsung tampil secepat kilat tanpa jeda loading berputar.</p>
+            </div>
+            <div class="managed-card">
+              <h4><span>🛡️</span> Kebal Hacker & Nol Error</h4>
+              <p>Website konvensional sering rusak akibat plugin kadaluarsa atau database dijebol malware/hacker judi online. Website statis tidak memiliki celah database tersebut, sehingga aman 100% beroperasi stabil 24/7.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
     <!-- BAGIAN BAWAH: RINCIAN TEKNIS & LINGKUP PEKERJAAN               -->
     <!-- ============================================================== -->
     <div class="tech-divider wrap">
@@ -753,25 +938,27 @@
           <article class="scope-card">
             <h3>Termasuk Paket Rp1.500.000</h3>
             <ul class="plain-list">
-              <li>Satu landing page profil bisnis statis berkecepatan tinggi dengan desain modern.</li>
-              <li>Penataan identitas visual, warna brand, dan penyusunan foto armada/layanan Anda.</li>
-              <li>Pemasangan tombol WhatsApp interaktif, nomor telepon, dan kalkulator durasi sewa.</li>
-              <li>Bantuan registrasi domain (.com) dan pengaturan sertifikat keamanan SSL/HTTPS.</li>
-              <li>Dua putaran revisi materi serta garansi pendampingan & perbaikan 7 hari setelah serah terima.</li>
+              <li>Satu landing page profil bisnis statis berkecepatan tinggi (&lt;1 detik) dengan desain responsif di semua tipe HP.</li>
+              <li>Pendaftaran nama domain resmi (.com) tahun pertama atas nama usaha Anda sendiri.</li>
+              <li>Cloud hosting statis modern & sertifikat keamanan HTTPS/SSL (gembok hijau resmi).</li>
+              <li>Penataan identitas visual, warna brand, dan kurasi foto armada atau layanan Anda.</li>
+              <li>Pemasangan tombol WhatsApp interaktif, nomor telepon, serta kalkulator durasi sewa otomatis.</li>
+              <li><strong>Layanan Terima Beres via WhatsApp:</strong> Pembaruan teks dan foto dibantu langsung oleh tim teknis kami tanpa Anda perlu membuka dashboard yang rumit.</li>
+              <li>Garansi pendampingan & perbaikan teknis 7 hari setelah serah terima.</li>
             </ul>
           </article>
           <article class="scope-card scope-card-excluded">
             <h3>Dihitung Terpisah (Jika Dibutuhkan)</h3>
             <ul class="plain-list">
-              <li>Biaya perpanjangan domain resmi (.com) untuk tahun kedua dan seterusnya (~Rp180rb/tahun).</li>
+              <li>Biaya perpanjangan tahun kedua dan seterusnya (hanya Rp500.000/tahun untuk domain .com, cloud hosting, dan pemeliharaan rutin).</li>
               <li>Sesi pemotretan profesional langsung di lokasi atau pembuatan logo baru dari nol.</li>
-              <li>Sistem backend kompleks seperti database akun login, payment gateway kartu kredit, atau dashboard internal.</li>
+              <li>Sistem database login member yang kompleks, payment gateway bank otomatis, atau dashboard internal koding.</li>
               <li>Iklan berbayar (Google Ads / Facebook Ads) dan jaminan peringkat #1 Google.</li>
-              <li>Penambahan halaman baru di luar kesepakatan awal.</li>
+              <li>Penambahan halaman baru atau sub-halaman di luar kesepakatan awal landing page.</li>
             </ul>
           </article>
         </div>
-        <p class="addons-note">Pemberitahuan: Layanan website di atas menggunakan infrastruktur cloud hosting statis modern yang sangat cepat dan hemat biaya. Kepemilikan akun domain tetap berada di tangan Anda.</p>
+        <p class="addons-note">Pemberitahuan: Seluruh website klien kami dibangun menggunakan teknologi cloud statis modern yang sangat cepat dan kebal error. Kepemilikan akun domain .com tetap 100% berada di tangan Anda.</p>
       </div>
     </section>
 
@@ -820,20 +1007,20 @@
           <article class="addon">
             <span class="addon-label">Visibilitas Lokal</span>
             <h3>Setup Google Maps & Profil Bisnis</h3>
-            <p>Bantuan pendaftaran titik lokasi usaha di Google Maps, kelengkapan jam operasional, dan tautan ke website resmi.</p>
+            <p>Bantuan pendaftaran titik lokasi usaha di Google Maps, kelengkapan jam operasional, dan tautan ke website resmi (sudah termasuk jika mengambil Paket Bisnis Pro).</p>
             <span class="addon-price">Rp500.000 / sekali setup</span>
           </article>
           <article class="addon">
-            <span class="addon-label">Pemeliharaan Bulanan</span>
-            <h3>Update Rutin & Backup</h3>
-            <p>Bantuan pergantian harga, penambahan foto unit baru, serta pemantauan agar website selalu aktif stabil.</p>
+            <span class="addon-label">Pembaruan Intensif</span>
+            <h3>Update Rutin Mingguan</h3>
+            <p>Khusus bisnis dengan rotasi armada atau menu baru setiap minggu. (Untuk update berkala ringan sudah GRATIS termasuk dalam paket tahunan).</p>
             <span class="addon-price">Rp250.000 / bulan</span>
           </article>
           <article class="addon">
             <span class="addon-label">Pengembangan Sistem</span>
             <h3>Fitur Khusus / Multi-Halaman</h3>
-            <p>Penambahan sistem pencatatan sewa, integrasi database, atau landing page cabang baru.</p>
-            <span class="addon-price">Estimasi Khusus</span>
+            <p>Penambahan sistem pencatatan sewa, integrasi database cabang baru, atau landing page promosi khusus.</p>
+            <span class="addon-price">Estimasi Khusus Sesuai Kebutuhan</span>
           </article>
         </div>
       </div>
@@ -877,20 +1064,36 @@
         </div>
         <div class="faq-list">
           <details>
-            <summary>Apakah saya harus paham teknologi untuk punya website?</summary>
-            <p>Sama sekali tidak. Seluruh urusan teknis seperti domain, server, desain, dan tombol WhatsApp kami yang siapkan dari nol sampai siap pakai. Anda cukup menerima pesanan yang masuk ke WhatsApp.</p>
+            <summary>Apakah saya mendapat dashboard login untuk mengedit website sendiri?</summary>
+            <p>Sengaja <strong>tidak kami berikan</strong>, karena kami menggunakan model <em>Managed Service (Terima Beres)</em>. Dari pengalaman kami, pemilik usaha sering merasa stres dan repot jika harus belajar koding atau dashboard WordPress yang rumit, belum lagi risiko salah pencet hingga tampilan web berantakan. Dengan sistem kami, jika ada perubahan harga, ganti nomor telepon, atau penambahan foto armada, Anda cukup mengirim pesan ke WhatsApp kami. Tim teknis kami yang akan mengurus pembaruannya dengan rapi dalam hitungan menit.</p>
           </details>
           <details>
-            <summary>Berapa lama proses pengerjaannya?</summary>
-            <p>Rata-rata 3 hingga 5 hari kerja setelah foto armada/usaha dan data harga Anda kirimkan kepada kami.</p>
+            <summary>Apakah saya harus membayar sewa hosting/server bulanan yang mahal?</summary>
+            <p><strong>Sama sekali tidak ada!</strong> Website Anda kami bangun menggunakan arsitektur cloud statis modern berkinerja tinggi. Tidak ada beban sewa server fisik bulanan atau database berat yang biasanya menghabiskan jutaan rupiah per tahun. Hosting cloud di tahun pertama sudah 100% GRATIS.</p>
+          </details>
+          <details>
+            <summary>Berapa biaya perpanjangan di tahun ke-2 dan seterusnya?</summary>
+            <p>Sangat transparan dan terjangkau: <strong>hanya Rp500.000 per tahun</strong> (kurang dari Rp42.000 per bulan). Biaya ini sudah mencakup perpanjangan resmi nama domain .com Anda, cloud hosting & keamanan SSL (gembok hijau), serta pemeliharaan teknis & bantuan update foto/harga ringan via WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Apakah nama domain (.com) bisa ditentukan bebas atas nama bisnis saya?</summary>
+            <p>Bisa bebas 100%. Contohnya: <em>namarental-timika.com</em>, <em>usahabapak.com</em>, atau <em>kafetimika.com</em> (selama nama tersebut belum dibeli pihak lain). Akun domain didaftarkan secara resmi atas nama usaha Anda, jadi domain tersebut adalah aset milik Anda seutuhnya.</p>
+          </details>
+          <details>
+            <summary>Bagaimana jika nanti ada unit armada baru atau pergantian harga sewa?</summary>
+            <p>Sangat mudah. Anda tidak perlu repot login ke komputer. Cukup kirimkan foto unit baru beserta tarif sewanya ke WhatsApp tim kami. Kami akan merapikan dan menayangkannya ke website Anda dengan cepat.</p>
+          </details>
+          <details>
+            <summary>Apa bedanya Paket Standar (Rp1,5 Jt) dan Paket Bisnis Pro (Rp2,5 Jt)?</summary>
+            <p>Paket Standar fokus pada pembuatan website landing page cepat dengan domain .com dan tombol booking WhatsApp. Sedangkan <strong>Paket Bisnis Pro</strong> sangat direkomendasikan jika usaha Anda belum muncul di Google Maps, karena sudah mencakup pendaftaran titik lokasi resmi Google Profil Bisnis, panduan rute dari bandara ke lokasi, optimasi pencarian lokal Timika (SEO), cetak QR Code, dan pengerjaan prioritas kilat (3 hari).</p>
           </details>
           <details>
             <summary>Apakah pelanggan bisa memesan langsung dari HP?</summary>
-            <p>Ya, 100%! Website dirancang sangat ringan untuk koneksi internet seluler di Timika. Tombol booking langsung membuka aplikasi WhatsApp di HP pelanggan secara otomatis.</p>
+            <p>Ya, 100%! Website dirancang sangat ringan untuk koneksi internet seluler di Timika. Tombol pemesanan atau kalkulator durasi sewa langsung membuka aplikasi WhatsApp di HP pelanggan secara otomatis dengan format rincian pesan yang sudah tersusun rapi.</p>
           </details>
           <details>
-            <summary>Bagaimana cara memulai?</summary>
-            <p>Cukup hubungi WhatsApp kami di 0821-4244-8254. Kirimkan nama usaha Anda dan jenis layanan yang ingin ditampilkan, kami akan siapkan draf konsepnya.</p>
+            <summary>Berapa lama proses pembuatan website dari awal sampai online?</summary>
+            <p>Rata-rata hanya 3 hingga 5 hari kerja setelah data usaha (foto armada, daftar harga, kontak) dan DP 50% kami terima.</p>
           </details>
         </div>
       </div>
