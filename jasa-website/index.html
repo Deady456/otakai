@@ -515,6 +515,11 @@
   </style>
 </head>
 <body>
+  <!-- DYNAMIC CLIENT WELCOME BANNER -->
+  <aside id="clientBanner" style="display:none; background: #eaf2ec; border-bottom: 1px solid #c9decb; color: #174c39; font-size: 13.5px; font-weight: 600; text-align: center; padding: 11px 16px;">
+    <div class="wrap" id="clientBannerText"></div>
+  </aside>
+
   <header class="topbar">
     <nav class="nav wrap" aria-label="Navigasi utama">
       <a class="brand" href="#beranda" aria-label="Otakai Studio, kembali ke awal">
@@ -678,13 +683,13 @@
         </div>
 
         <div class="demo-grid">
-          <!-- Demo 1 -->
-          <div class="demo-card">
+          <!-- Demo 1 (Dynamic Client Demo) -->
+          <div class="demo-card" id="demoRentalCard">
             <div class="demo-header">
-              <span class="demo-badge badge-rental">⭐ Contoh Siap Pakai: Rental Mobil</span>
-              <h3>Demo Website Rental Mobil Timika</h3>
-              <p>Didesain mewah untuk kelas korporasi. Dilengkapi foto unit Innova Zenix, Fortuner GR, Hilux 4x4 tambang, rute Timika-Tembagapura, serta kalkulator durasi sewa yang langsung terhubung ke WhatsApp.</p>
-              <div class="demo-pills">
+              <span class="demo-badge badge-rental" id="demoRentalBadge">⭐ Contoh Siap Pakai: Rental Mobil</span>
+              <h3 id="demoRentalTitle">Demo Website Rental Mobil Timika</h3>
+              <p id="demoRentalDesc">Didesain mewah untuk kelas korporasi. Dilengkapi foto unit Innova Zenix, Fortuner GR, Hilux 4x4 tambang, rute Timika-Tembagapura, serta kalkulator durasi sewa yang langsung terhubung ke WhatsApp.</p>
+              <div class="demo-pills" id="demoRentalPills">
                 <span class="pill">Kalkulator Sewa</span>
                 <span class="pill">Katalog Armada</span>
                 <span class="pill">Booking WA Instan</span>
@@ -692,11 +697,11 @@
               </div>
             </div>
             <div class="demo-footer">
-              <a href="https://million-stars-timika.vercel.app/preview-phone" target="_blank" rel="noopener noreferrer" class="preview-link">
+              <a id="demoRentalPhoneLink" href="https://million-stars-timika.vercel.app/preview-phone" target="_blank" rel="noopener noreferrer" class="preview-link">
                 📱 Buka Simulasi Layar HP
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               </a>
-              <a href="https://million-stars-timika.vercel.app" target="_blank" rel="noopener noreferrer" class="button button-small">
+              <a id="demoRentalWebLink" href="https://million-stars-timika.vercel.app" target="_blank" rel="noopener noreferrer" class="button button-small">
                 Buka Website Langsung
               </a>
             </div>
@@ -913,5 +918,95 @@
       <p><a href="#beranda">Kembali ke atas ↑</a></p>
     </div>
   </footer>
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const clientKey = (urlParams.get('client') || urlParams.get('target') || '').toLowerCase().trim();
+
+      const clients = {
+        'jr21': {
+          name: 'Jr21 Rental Mobil Timika',
+          badge: '⭐ Contoh Khusus: Jr21 Rental Mobil',
+          title: 'Demo Website Jr21 Rental Mobil Timika',
+          desc: 'Disesuaikan khusus untuk Jr21 Rental Mobil (Jl. Hasanuddin, Nawaripi). Dilengkapi foto armada Fortuner GR, Innova Zenix Hybrid, Hilux 4x4 tambang, kalkulator durasi sewa, serta tombol booking yang sudah langsung terhubung ke WhatsApp bapak (0812-4727-3834).',
+          phoneLink: 'https://jr21-rental-timika.vercel.app/preview-phone',
+          webLink: 'https://jr21-rental-timika.vercel.app',
+          pills: ['Fortuner & Zenix', 'Kalkulator Sewa', 'Alamat Nawaripi', 'WA: 0812-4727-3834']
+        },
+        'millionstars': {
+          name: 'Million Stars Rent Car Timika',
+          badge: '⭐ Contoh Khusus: Million Stars Rent Car',
+          title: 'Demo Website Million Stars Rent Car Timika',
+          desc: 'Disesuaikan khusus untuk Million Stars Rent Car Timika. Dilengkapi rute sewa Tembagapura/Freeport, foto unit Innova Zenix & Hilux 4x4, kalkulator durasi sewa, serta tombol booking yang langsung terhubung ke WhatsApp bapak (0823-4386-4942).',
+          phoneLink: 'https://million-stars-timika.vercel.app/preview-phone',
+          webLink: 'https://million-stars-timika.vercel.app',
+          pills: ['Rute Tembagapura', 'Kalkulator Sewa', 'Katalog Mewah', 'WA: 0823-4386-4942']
+        },
+        'amanah': {
+          name: 'Timika Rental Car (Amanah)',
+          badge: '⭐ Contoh Khusus: Timika Rental Car',
+          title: 'Demo Website Timika Rental Car (Amanah)',
+          desc: 'Disesuaikan khusus untuk Timika Rental Car (Jl. Pendidikan). Dilengkapi katalog unit, sewa lepas kunci / dengan driver dinas, dan tombol WhatsApp aktif (0813-4320-5375).',
+          phoneLink: 'https://million-stars-timika.vercel.app/preview-phone',
+          webLink: 'https://million-stars-timika.vercel.app',
+          pills: ['Jl. Pendidikan', 'Lepas Kunci & Driver', 'Kalkulator Sewa', 'WA: 0813-4320-5375']
+        },
+        'cendrawasih': {
+          name: 'Rental Mobil Timika Papua',
+          badge: '⭐ Contoh Khusus: Rental Mobil Timika Papua',
+          title: 'Demo Website Rental Mobil Timika Papua',
+          desc: 'Disesuaikan khusus untuk Rental Mobil Timika Papua (Jl. Cendrawasih Kwamki). Dilengkapi katalog unit dan tombol pemesanan langsung ke WhatsApp bapak (0821-8553-6777).',
+          phoneLink: 'https://million-stars-timika.vercel.app/preview-phone',
+          webLink: 'https://million-stars-timika.vercel.app',
+          pills: ['Jl. Cendrawasih', 'Sewa Harian/Bulanan', 'Booking WA', 'WA: 0821-8553-6777']
+        },
+        'genz': {
+          name: 'Gen Z Rental Mobil Timika',
+          badge: '⭐ Contoh Khusus: Gen Z Rental Mobil',
+          title: 'Demo Website Gen Z Rental Mobil Timika',
+          desc: 'Disesuaikan khusus untuk Gen Z Rental Mobil Timika. Tampilan mobile modern, katalog unit city car & MPV, serta tombol booking langsung ke WhatsApp bapak (0823-2374-7554).',
+          phoneLink: 'https://million-stars-timika.vercel.app/preview-phone',
+          webLink: 'https://million-stars-timika.vercel.app',
+          pills: ['Desain Kekinian', 'Sewa Lepas Kunci', 'Booking Cepat', 'WA: 0823-2374-7554']
+        }
+      };
+
+      if (clientKey && clients[clientKey]) {
+        const c = clients[clientKey];
+        // 1. Tampilkan banner personal di atas
+        const banner = document.getElementById('clientBanner');
+        const bannerText = document.getElementById('clientBannerText');
+        if (banner && bannerText) {
+          bannerText.innerHTML = `👋 Halo Bapak/Admin <strong>${c.name}</strong> — Halaman ini kami siapkan khusus agar Anda dapat melihat contoh pratinjau website untuk usaha Anda.`;
+          banner.style.display = 'block';
+        }
+
+        // 2. Sesuaikan Kartu Demo Rental Mobil
+        const badge = document.getElementById('demoRentalBadge');
+        const title = document.getElementById('demoRentalTitle');
+        const desc = document.getElementById('demoRentalDesc');
+        const phoneLink = document.getElementById('demoRentalPhoneLink');
+        const webLink = document.getElementById('demoRentalWebLink');
+        const pillsContainer = document.getElementById('demoRentalPills');
+
+        if (badge) badge.textContent = c.badge;
+        if (title) title.textContent = c.title;
+        if (desc) desc.textContent = c.desc;
+        if (phoneLink) phoneLink.href = c.phoneLink;
+        if (webLink) webLink.href = c.webLink;
+
+        if (pillsContainer && c.pills) {
+          pillsContainer.innerHTML = c.pills.map(p => `<span class="pill">${p}</span>`).join('');
+        }
+
+        // 3. Sesuaikan seluruh link tombol WhatsApp agar menyapa sesuai nama klien
+        const waButtons = document.querySelectorAll('a[href*="wa.me/6282142448254"]');
+        const customWaMsg = encodeURIComponent(`Halo Otakai Studio, saya dari ${c.name}. Saya ingin konsultasi pembuatan website usaha kami.`);
+        waButtons.forEach(btn => {
+          btn.href = `https://wa.me/6282142448254?text=${customWaMsg}`;
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
